@@ -1,0 +1,205 @@
+{
+  "capabilities": {
+    "optional": [],
+    "required": [
+      "core.layers.v1",
+      "vfs.hardlink.v1",
+      "local_locator.v1",
+      "persistence.saves.v1"
+    ]
+  },
+  "config_templates": [],
+  "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/library_600x900_2x.jpg",
+  "extends": null,
+  "fallback": [],
+  "id": "grand-theft-auto-iv",
+  "launch": {
+    "args": [],
+    "depends_on": [],
+    "env": {},
+    "executable": "GTAIV/GTAIV.exe",
+    "id": "default",
+    "role": "primary"
+  },
+  "layers": [
+    {
+      "content": "generic",
+      "critical_files": [],
+      "default_enabled": false,
+      "depends_on": [],
+      "description": "Locates your local installation without modifying original files or copying base game assets into the bundle.",
+      "dynamic_provider": null,
+      "id": "base-game",
+      "kind": "base",
+      "mount_path": "",
+      "optional": false,
+      "patch": null,
+      "size_bytes": null,
+      "source": {
+        "kind": "local_locator",
+        "locator": {
+          "app_id": "12210",
+          "key_files": [
+            {
+              "blake3": "bd0fb0f9f9f2ef097d9e169fa0fb4d5cce87730aec62e5d524c268ae67663fcc",
+              "path": "GTAIV/GTAIV.exe",
+              "role": "main_executable"
+            }
+          ],
+          "match_by_path_only": true,
+          "path_hints": [
+            "Grand Theft Auto IV"
+          ],
+          "store": "steam"
+        }
+      },
+      "title": "User-Owned Base Game",
+      "transport_digest": null,
+      "writable_copy_paths": []
+    },
+    {
+      "content": "generic",
+      "critical_files": [
+        {
+          "blake3": "5ce215bdf144adebc69ebf3f84221fd6b147b0efecd46a41b1bba8517eea75b9",
+          "path": "d3d9.dll",
+          "role": "core_library"
+        },
+        {
+          "blake3": "9ac27052defbf2b496e41d0cd82cd2e3acc0f802ab10f56eba7621d75b215d03",
+          "path": "dinput8.dll",
+          "role": "injector_dll"
+        },
+        {
+          "blake3": "d774de86ccfec3358491086866daa43ad6638143a6a227ebb8b9d93f4d09e14a",
+          "path": "plugins/GTAIV.EFLC.FusionFix.asi",
+          "role": "injector_dll"
+        },
+        {
+          "blake3": "d878cac1a54a4ffc07438176cb447f8740ab923305e8d8d135902311f9593d68",
+          "path": "vulkan.dll",
+          "role": "core_library"
+        }
+      ],
+      "default_enabled": false,
+      "depends_on": [
+        "base-game"
+      ],
+      "description": "Modern shaders, volumetric fog, shadows, bloom, high-FPS fixes, and built-in Vulkan/DXVK renderer toggle for Complete Edition v1.2.0.59.",
+      "dynamic_provider": null,
+      "id": "fusionfix",
+      "kind": "mod",
+      "mount_path": "GTAIV",
+      "optional": false,
+      "patch": null,
+      "size_bytes": 213539085,
+      "source": {
+        "archive": "zip",
+        "kind": "remote",
+        "mirrors": [
+          "https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases/download/v5.1.2/GTAIV.EFLC.FusionFix.zip"
+        ]
+      },
+      "title": "GTAIV.EFLC.FusionFix v5.1.2",
+      "transport_digest": {
+        "algorithm": "blake3",
+        "value": "096abd664bb572b6e3af02fdfcf73b1f6eba19335e7b95389357c38b4d8930b7"
+      },
+      "writable_copy_paths": [
+        "plugins/GTAIV.EFLC.FusionFix.ini"
+      ]
+    },
+    {
+      "content": "generic",
+      "critical_files": [
+        {
+          "blake3": "a3543f8cacb691dc33160d5b9b23f61b00cb4a6fdf635be091aa424f2ce1ae35",
+          "path": "IVLodLights.asi",
+          "role": "injector_dll"
+        }
+      ],
+      "default_enabled": true,
+      "depends_on": [
+        "fusionfix"
+      ],
+      "description": "Restores distant night LOD lights across Liberty City.",
+      "dynamic_provider": null,
+      "id": "project2dfx",
+      "kind": "addon",
+      "mount_path": "GTAIV",
+      "optional": true,
+      "patch": null,
+      "size_bytes": 3082636,
+      "source": {
+        "archive": "zip",
+        "kind": "remote",
+        "mirrors": [
+          "https://github.com/ThirteenAG/III.VC.SA.IV.Project2DFX/releases/download/gtaiv/IV.Project2DFX.zip"
+        ]
+      },
+      "title": "IV.Project2DFX (Distant City Lights)",
+      "transport_digest": {
+        "algorithm": "blake3",
+        "value": "2b053b7677a1ae255c1845fbbd22b14b571bb684fae4225fa36da85937e403ba"
+      },
+      "writable_copy_paths": []
+    },
+    {
+      "content": "generic",
+      "critical_files": [],
+      "default_enabled": false,
+      "depends_on": [
+        "fusionfix"
+      ],
+      "description": "Adds writable GTAIV/commandline.txt (-nomemrestrict -norestrictions) and release notes.",
+      "dynamic_provider": null,
+      "id": "fusion-config",
+      "kind": "mod",
+      "mount_path": "",
+      "optional": false,
+      "patch": null,
+      "size_bytes": 1133,
+      "source": {
+        "archive": "zip",
+        "kind": "remote",
+        "mirrors": [
+          "https://blessdevhq.github.io/fusion-grand-theft-auto-iv/artifacts/5417138122447acbf76bfecbc7aba14f603bf1b6bf33b09593c778382765e979.zip"
+        ]
+      },
+      "title": "Fusion Remastered Config",
+      "transport_digest": {
+        "algorithm": "blake3",
+        "value": "5417138122447acbf76bfecbc7aba14f603bf1b6bf33b09593c778382765e979"
+      },
+      "writable_copy_paths": [
+        "GTAIV/commandline.txt"
+      ]
+    }
+  ],
+  "local_placement": "require_same_volume",
+  "metadata": {
+    "category": "modpack",
+    "homepage_url": "https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix",
+    "summary": "Non-destructive graphics & QoL remaster for GTA IV Complete Edition v1.2.0.59: FusionFix v5.1.2 (shaders, volumetric fog, shadows, built-in Vulkan/DXVK) + optional IV.Project2DFX distant lights.",
+    "tags": [
+      "modpack",
+      "remastered",
+      "graphics",
+      "fusionfix",
+      "dxvk",
+      "local-locator"
+    ]
+  },
+  "orchestrator": null,
+  "persistence": {
+    "saves_paths": [
+      "workspace/saves"
+    ]
+  },
+  "platform": "pc",
+  "post_setup_steps": [],
+  "runtime": null,
+  "schema_version": "1.0",
+  "title": "Grand Theft Auto IV: Remastered",
+  "version": "1.1.2"
+}

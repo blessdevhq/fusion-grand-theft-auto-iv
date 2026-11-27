@@ -1,0 +1,58 @@
+{
+  "games": [
+    {
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/library_600x900_2x.jpg",
+      "id": "grand-theft-auto-iv",
+      "manifest_blake3": "be1ed51c60ae465edd75013528b2d1fab1533e46c49721a0e98a8789e1750515",
+      "manifest_url": "https://blessdevhq.github.io/fusion-grand-theft-auto-iv/manifests/grand-theft-auto-iv-be1ed51c60ae465edd75013528b2d1fab1533e46c49721a0e98a8789e1750515.json",
+      "metadata": {
+        "category": "modpack",
+        "homepage_url": "https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix",
+        "summary": "Non-destructive graphics & QoL remaster for GTA IV Complete Edition v1.2.0.59: FusionFix v5.1.2 (shaders, volumetric fog, shadows, built-in Vulkan/DXVK) + optional IV.Project2DFX distant lights.",
+        "tags": [
+          "modpack",
+          "remastered",
+          "graphics",
+          "fusionfix",
+          "dxvk",
+          "local-locator"
+        ]
+      },
+      "platform": "pc",
+      "title": "Grand Theft Auto IV: Remastered",
+      "version": "1.1.2"
+    },
+    {
+      "cover_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/library_600x900_2x.jpg",
+      "id": "grand-theft-auto-iv-coop",
+      "manifest_blake3": "6ba9371395a153edc5b535cefabbfdff7bacf1d189c6f91fb5116a90bfe1df8e",
+      "manifest_url": "https://blessdevhq.github.io/fusion-grand-theft-auto-iv/manifests/grand-theft-auto-iv-coop-6ba9371395a153edc5b535cefabbfdff7bacf1d189c6f91fb5116a90bfe1df8e.json",
+      "metadata": {
+        "category": "modpack",
+        "homepage_url": "https://zolika1351.pages.dev/mods/ivmenu",
+        "summary": "Story Mode Co-op & graphics pack for downgraded GTA IV 1.0.7.0/1.0.8.0: Ultimate ASI Loader + XLiveLessNess (XLLN v1.6.2.1) + ZolikaPatch + ZMenu IV (SP Co-op) + optional FusionFix-GFWL v3.5.1-2.",
+        "tags": [
+          "modpack",
+          "coop",
+          "story-coop",
+          "xlln",
+          "zmenu",
+          "1.0.7.0",
+          "local-locator"
+        ]
+      },
+      "platform": "pc",
+      "title": "Grand Theft Auto IV: Story Mode Co-op (1.0.7.0)",
+      "version": "1.0.0"
+    }
+  ],
+  "schema_version": "1.0",
+  "signature": "OlUOpJs77hzdn0EJ7q6E2fioH72e+TNkOLZCYpTFmt9E1aFEjnLZqcxpS0OASyL4YhNuSZxy8TJzHYn2uwuEBQ==",
+  "source_info": {
+    "id": "grand-theft-auto-iv-source",
+    "maintainer": "Fusion Community",
+    "name": "Grand Theft Auto IV Remastered Source",
+    "public_key": "7YcW/jKdOEkXjKy8KLLrgjtPiQj+dvVQrMhl05t6ikw=",
+    "telemetry_endpoint": null
+  }
+}
